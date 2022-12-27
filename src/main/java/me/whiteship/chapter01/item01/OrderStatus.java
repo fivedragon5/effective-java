@@ -9,4 +9,8 @@ public enum OrderStatus {
     OrderStatus(int number) {
         this.number = number;
     }
+
+    public int getNumber() {
+        return this.number;
+    }
 }
