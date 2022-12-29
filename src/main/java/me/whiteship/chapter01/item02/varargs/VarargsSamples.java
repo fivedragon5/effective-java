@@ -1,6 +1,7 @@
 package me.whiteship.chapter01.item02.varargs;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class VarargsSamples {
 

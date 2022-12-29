@@ -17,6 +17,8 @@ public abstract class Pizza {
         EnumSet<Topping> toppings = EnumSet.noneOf(Topping.class);
         public T addTopping(Topping topping) {
             toppings.add(Objects.requireNonNull(topping));
+            //Pizza 추상클래스에서 정의한 addTopping의 return이 this가아니라 self이기때문에
+            //Pizza를 구현한 다른 자식 클래스들이 Builder를 할때 casting을 하는 번거로움을 덜 수 있음
             return self();
         }
 

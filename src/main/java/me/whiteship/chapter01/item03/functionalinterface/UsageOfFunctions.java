@@ -3,6 +3,7 @@ package me.whiteship.chapter01.item03.functionalinterface;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class UsageOfFunctions {
@@ -13,9 +14,13 @@ public class UsageOfFunctions {
         dates.add(LocalDate.of(2011, 3, 2));
         dates.add(LocalDate.of(2013, 1, 28));
 
+//        Predicate<LocalDate> localDatePredicate
+
         List<Integer> before2000 = dates.stream()
                 .filter(d -> d.isBefore(LocalDate.of(2000, 1, 1)))
                 .map(LocalDate::getYear)
                 .collect(Collectors.toList());
+
+        before2000.stream().forEach(System.out::println);
     }
 }

@@ -23,8 +23,11 @@ public class MetaElvis<T> {
     public static void main(String[] args) {
         MetaElvis<String> elvis1 = MetaElvis.getInstance();
         MetaElvis<Integer> elvis2 = MetaElvis.getInstance();
+        //타입이 달라서 == 비교는 안되고 equals비교를 해야함
         System.out.println(elvis1);
         System.out.println(elvis2);
+        System.out.println(elvis1.equals(elvis1));
+        System.out.println(Objects.equals(elvis1, elvis2));
         elvis1.say("hello");
         elvis2.say(100);
     }
